@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimarybg">#FFFFFF</color>
+    <color name="colorPrimaryDark">#3a9fca</color>
+    <color name="colorButton">#294d05</color>
+    <color name="colorAccent">#57bfca</color>
+    <color name="editTextBG">#DADADA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white1">#e1dede</color>
+    <color name="white2">#e0ecea</color>
+    <color name="whitetp">#46e6f0f2</color>
+    <color name="transparent">#00000000</color>
+    <color name="textColor">#6e6e6e</color>
+    <color name="green">#00ac09</color>
+    <color name="red">#a90101</color>
+    <color name="coklat">#69311a</color>
+    <color name="coklatmuda">#af6d52</color>
+    <color name="hitam">#000000</color>
+    <color name="hitam1">#383636</color>
+    <color name="abu">#b7716767</color>
+    <color name="kuning">#b1a416</color>
+    <color name="kuningtua">#735d07</color>
+    <color name="hijau">#008f0e</color>
+    <color name="hijautua">#012505</color>
+    <color name="biru">#5EC3D1</color>
+    <color name="biru1">#9f5ed1</color>
+    <color name="birutp">#3c9f5ed1</color>
+    <color name="ungu">#7106ab</color>
+    <color name="tp">#007106ab</color>
+    <color name="gradient"></color>
+</resources>

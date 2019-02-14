@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_user"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_myroom"
+            android:icon="@drawable/ic_people"
+            android:title="My Room" />
+        <item
+            android:id="@+id/nav_donasi"
+            android:icon="@drawable/ic_payment"
+            android:title="Donasi" />
+        <item
+            android:id="@+id/nav_tentang"
+            android:icon="@drawable/ic_info"
+            android:title="Tentang" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_log_out"
+            android:title="Log Out" />
+    </group>
+
+</menu>

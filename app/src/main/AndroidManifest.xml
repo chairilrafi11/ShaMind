@@ -23,7 +23,11 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".Room" />
         <activity android:name=".Buat_Room" />
-        <activity android:name=".Register"/>
+        <activity android:name=".Register" />
+        <activity android:name=".Profile" />
+        <activity android:name=".My_Room" />
+        <activity android:name=".Donasi" />
+        <activity android:name=".Tentang"></activity>
     </application>
 
 </manifest>

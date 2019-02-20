@@ -92,6 +92,8 @@ public class My_Room extends AppCompatActivity
             startActivity(mIntent);
         } else if (id == R.id.nav_logout) {
             mAuth.signOut();
+            Intent mIntent = new Intent(My_Room.this, Login.class);
+            startActivity(mIntent);
         }
 
 

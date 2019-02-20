@@ -20,11 +20,14 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class Login extends AppCompatActivity {
 
 
-    private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
 
@@ -40,6 +43,16 @@ public class Login extends AppCompatActivity {
     private ProgressDialog progressDialog;
     private int progressStatus = 0;
 
+    private FirebaseDatabase mFirebaseDatabase;
+    private FirebaseAuth mAuth;
+    private DatabaseReference myRef;
+    private FirebaseStorage storage;
+    private StorageReference storageRef;
+    private String userID;
+
+    public Login() {
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +62,13 @@ public class Login extends AppCompatActivity {
             finish();
         }
 
+        mAuth = FirebaseAuth.getInstance();
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
+        myRef = mFirebaseDatabase.getReference();
+        FirebaseUser user = mAuth.getCurrentUser();
+
+
+
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -57,15 +77,13 @@ public class Login extends AppCompatActivity {
                     // User is signed in
                     System.out.println("id User = " + user.getUid());
                     startActivity(new Intent(Login.this, Home.class));
+                    userID = user.getUid();
                 } else {
                     // User is signed out
                 }
             }
         };
 
-
-
-        mAuth = FirebaseAuth.getInstance();
 
         progressDialog = new ProgressDialog(this);
         Register = (TextView) findViewById(R.id.btn_register);
@@ -211,4 +229,13 @@ public class Login extends AppCompatActivity {
         super.onStart();
         mAuth.addAuthStateListener(mAuthListener);
     }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
+        }
+    }
+
 }

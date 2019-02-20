@@ -41,7 +41,9 @@
                 android:textSize="20dp"
                 android:textColor="@color/hitam1"/>
 
+
             <EditText
+                android:id="@+id/editTextRoomName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColorLink="@color/hitam1"
@@ -56,6 +58,8 @@
                 android:layout_marginTop="10dp"/>
 
             <EditText
+                android:id="@+id/editTextJumlahAnggota"
+                android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColorLink="@color/hitam1"
@@ -81,16 +85,19 @@
                     android:paddingRight="10dp">
 
                     <CheckBox
+                        android:id="@+id/checkBoxPendidikan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Pendidikan"/>
 
                     <CheckBox
+                        android:id="@+id/checkBoxOlahraga"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Olahraga"/>
 
                     <CheckBox
+                        android:id="@+id/checkBoxMasak"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Masak"/>
@@ -104,16 +111,19 @@
                     android:orientation="vertical">
 
                     <CheckBox
+                        android:id="@+id/checkBoxTeknologi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Teknologi" />
 
                     <CheckBox
+                        android:id="@+id/checkBoxPolitik"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Politik"/>
 
                     <CheckBox
+                        android:id="@+id/checkBoxGayaHidup"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Gaya Hidup"/>
@@ -133,6 +143,7 @@
             android:layout_marginBottom="20dp">
 
             <Button
+                android:id="@+id/buttonKembaliBuatRoom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -141,6 +152,7 @@
                 android:textColor="@color/white"/>
 
             <Button
+                android:id="@+id/buttonBuatRoom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"

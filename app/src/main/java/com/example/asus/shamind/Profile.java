@@ -91,6 +91,8 @@ public class Profile extends AppCompatActivity
             startActivity(mIntent);
         } else if (id == R.id.nav_logout) {
             mAuth.signOut();
+            Intent mIntent = new Intent(Profile.this, Login.class);
+            startActivity(mIntent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -4,81 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white1"
     android:clipToPadding="false"
     android:focusableInTouchMode="true"
-    android:background="@color/white1"
     tools:context=".Room">
 
 
     <TextView
+        android:id="@+id/tvKelas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient"
+        android:paddingLeft="20dp"
         android:text="XII - RPL 3"
         android:textColor="@color/white1"
-        android:textSize="30dp"
-        android:paddingLeft="20dp"
-        android:background="@drawable/bg_gradient" />
+        android:textSize="30dp" />
 
     <ScrollView
+        android:layout_below="@+id/tvKelas"
+        android:id="@+id/scrollLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:paddingBottom="50dp"
+        >
 
-        <RelativeLayout
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/layout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="86dp"
-                android:layout_marginRight="4dp"
-                android:background="@drawable/my_message_bubble"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="10dp"
-                android:text="Hallo, apa kabar"
-                android:textSize="15dp" />
-
-            <View
-                android:id="@+id/avatar"
-                android:layout_width="34dp"
-                android:layout_height="34dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="11dp"
-                android:layout_marginTop="133dp"
-                android:background="@drawable/avatar"
-                android:scaleType="centerInside" />
-
-            <TextView
-                android:id="@+id/name"
-                android:layout_marginLeft="15dp"
-                android:layout_toRightOf="@+id/avatar"
-                android:layout_alignTop="@+id/avatar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="4dp"
-                android:text="Rose"/>
-
-            <TextView
-                android:id="@+id/message_body"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/name"
-                android:layout_alignLeft="@+id/name"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="3dp"
-                android:background="@drawable/their_message_bubble"
-                android:layout_marginRight="10dp"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="10dp"
-                android:text="Hai, Aku baik baik saja"
-                android:textSize="15dp" />
-
-
+                android:orientation="vertical"></LinearLayout>
         </RelativeLayout>
-
     </ScrollView>
 
     <RelativeLayout
@@ -91,30 +52,30 @@
             android:id="@+id/Btn_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_image"
-            android:background="@color/white"
             android:layout_centerVertical="true"
-            android:padding="5dp"/>
+            android:background="@color/white"
+            android:padding="5dp"
+            android:src="@drawable/ic_image" />
 
         <EditText
+            android:id="@+id/editTextMessageS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/Btn_img"
-            android:id="@+id/EditText_"
-            android:hint="Masukan Pesan Di Sini"
-            android:textColor="@color/hitam"
-            android:textAlignment="textStart"
-            android:maxHeight="70dp"
-            android:textColorHint="@color/abu"
-            android:textSize="15dp"
-            android:background="@drawable/edittext_oval"
-            android:textColorLink="@color/biru"
-            android:shadowColor="@color/biru"
-            android:layout_toLeftOf="@+id/Image_Send"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginLeft="5dp"
-            android:padding="10dp"/>
+            android:layout_toLeftOf="@+id/Image_Send"
+            android:layout_toRightOf="@+id/Btn_img"
+            android:background="@drawable/edittext_oval"
+            android:hint="Masukan Pesan Di Sini"
+            android:maxHeight="70dp"
+            android:padding="10dp"
+            android:shadowColor="@color/biru"
+            android:textAlignment="textStart"
+            android:textColor="@color/hitam"
+            android:textColorHint="@color/abu"
+            android:textColorLink="@color/biru"
+            android:textSize="15dp" />
 
         <ImageButton
             android:id="@+id/Image_Send"
@@ -122,12 +83,12 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/ic_send" />
 
     </RelativeLayout>

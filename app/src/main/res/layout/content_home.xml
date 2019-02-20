@@ -18,6 +18,7 @@
             android:orientation="vertical">
 
         <TextView
+            android:onClick="refresh"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="My Chat"
@@ -27,8 +28,9 @@
             android:layout_marginBottom="10dp"/>
 
         <ListView
+            android:id="@+id/listViewNamaRoom"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="200dp">
 
         </ListView>
 

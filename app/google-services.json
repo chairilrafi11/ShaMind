@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "119907453089",
+    "firebase_url": "https://shamind-6969.firebaseio.com",
+    "project_id": "shamind-6969",
+    "storage_bucket": "shamind-6969.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119907453089:android:b980345f705f6ee1",
+        "android_client_info": {
+          "package_name": "com.example.asus.shamind"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119907453089-j1mr5d9u7ufj1h8qb2sp27q1qcmd558j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.asus.shamind",
+            "certificate_hash": "a9c07bad901604ce71369c42f88b669f52c0e5c9"
+          }
+        },
+        {
+          "client_id": "119907453089-98fvd1e087mbi3toku3j8s69jrrrj3vt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6nLlko6fh81GLQv4fAP3DJN7D6MMgUGU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "119907453089-98fvd1e087mbi3toku3j8s69jrrrj3vt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

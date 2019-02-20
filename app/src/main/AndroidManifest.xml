@@ -27,7 +27,8 @@
         <activity android:name=".Profile" />
         <activity android:name=".My_Room" />
         <activity android:name=".Donasi" />
-        <activity android:name=".Tentang"></activity>
+        <activity android:name=".Tentang" />
+        <activity android:name=".OnBoradingScreen"></activity>
     </application>
 
 </manifest>

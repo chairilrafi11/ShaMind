@@ -55,6 +55,7 @@ public class Login extends AppCompatActivity {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
                     // User is signed in
+                    System.out.println("id User = " + user.getUid());
                     startActivity(new Intent(Login.this, Home.class));
                 } else {
                     // User is signed out
@@ -204,5 +205,10 @@ public class Login extends AppCompatActivity {
             backToast.show();
         }
         backPressedTime = System.currentTimeMillis();
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
     }
 }

@@ -11,14 +11,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class My_Room extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_room);
-
+        mAuth = FirebaseAuth.getInstance();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -87,8 +91,7 @@ public class My_Room extends AppCompatActivity
             Intent mIntent = new Intent(My_Room.this, Tentang.class);
             startActivity(mIntent);
         } else if (id == R.id.nav_logout) {
-            Intent mIntent = new Intent(My_Room.this, Home.class);
-            startActivity(mIntent);
+            mAuth.signOut();
         }
 
 

@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -31,7 +32,10 @@ public class Register extends AppCompatActivity {
     private EditText editTextPassword;
     private EditText editReTextPassword;
     private Button Register;
+    private TextView Login;
     private ProgressDialog progressDialog;
+    private long backPressedTime;
+
 
     //defining firebaseauth object
     private String userID;
@@ -61,8 +65,17 @@ public class Register extends AppCompatActivity {
         editTextPassword = (EditText) findViewById(R.id.editTextPasswordRegister);
         editReTextPassword = (EditText) findViewById(R.id.editTextRePasswordRegister);
         Register = (Button) findViewById(R.id.button_register);
+        Login = (TextView) findViewById(R.id.Btn_login_Register);
 
         progressDialog = new ProgressDialog(this);
+
+        Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(Register.this, Login.class);
+                startActivity(mIntent);
+            }
+        });
 
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,5 +134,18 @@ public class Register extends AppCompatActivity {
             }
         });
 
+    }
+    @Override
+    public void onBackPressed() {
+        if (backPressedTime + 2000 > System.currentTimeMillis()) {
+            super.onBackPressed();
+            Intent intent = new Intent(Register.this, Login.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.putExtra("EXIT", true);
+            startActivity(intent);
+        } else {
+            Toast.makeText(getBaseContext(), "Tekan Lagi Untuk Keluar", Toast.LENGTH_SHORT).show();
+        }
+        backPressedTime = System.currentTimeMillis();
     }
 }

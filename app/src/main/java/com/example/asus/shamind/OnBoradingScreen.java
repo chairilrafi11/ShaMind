@@ -62,7 +62,7 @@ public class OnBoradingScreen extends AppCompatActivity implements View.OnClickL
         }
 
         if (mDots.length>0){
-            mDots[position] .setTextColor(getResources().getColor(R.color.white1)); //setting currently selected dot to white
+            mDots[position] .setTextColor(getResources().getColor(R.color.abu)); //setting currently selected dot to white
         }
     }
 

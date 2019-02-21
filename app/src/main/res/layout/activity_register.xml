@@ -71,6 +71,40 @@
 
                 </RelativeLayout>
 
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView1"
+                    android:background="@color/white2"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <ImageView
+                        android:id="@+id/icon_User"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_user"
+                        android:layout_centerVertical="true"/>
+
+                    <EditText
+                        android:id="@+id/editTextUserRegister"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/icon_User"
+                        android:background="@drawable/edit_text1"
+                        android:inputType="textEmailAddress"
+                        android:hint="     Username"
+                        android:textColor="@color/abu"
+                        android:textAlignment="inherit"
+                        android:textColorHint="@color/abu"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
                 <RelativeLayout
                     android:id="@+id/relativeLayout1"
                     android:layout_width="match_parent"
@@ -85,7 +119,7 @@
                         android:id="@+id/icon_email"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_user"
+                        android:src="@drawable/ic_mail"
                         android:layout_centerVertical="true"/>
 
                     <EditText

@@ -51,6 +51,8 @@ public class Room extends AppCompatActivity {
     private String Username;
     private int i = 1;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -129,9 +131,10 @@ public class Room extends AppCompatActivity {
 
     public void addMessageBox(String message, int type) {
         TextView textView = new TextView(Room.this);
+        textView.setPadding(50,50,50,25);
         textView.setText(message);
 
-        LinearLayout.LayoutParams lp2 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        LinearLayout.LayoutParams lp2 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT );
         lp2.weight = 1.0f;
 
         if (type == 1) {

@@ -35,6 +35,7 @@ public class Room extends AppCompatActivity {
     private String ID;
     private ScrollView scrollView;
     private LinearLayout layout;
+    private TextView tvKelas;
 
     private String userID;
     private FirebaseAuth mAuth;
@@ -51,12 +52,15 @@ public class Room extends AppCompatActivity {
     private String Username;
     private int i = 1;
 
-
+    String NamaRoom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room);
+
+
+        NamaRoom = getIntent().getStringExtra("ROOM");
 
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
@@ -80,8 +84,11 @@ public class Room extends AppCompatActivity {
         Kirim = (ImageButton) findViewById(R.id.Image_Send);
         Pesan = (EditText) findViewById(R.id.editTextMessageS);
 
+        tvKelas = (TextView) findViewById(R.id.tvKelas);
         scrollView = (ScrollView) findViewById(R.id.scrollLayout);
         layout = (LinearLayout) findViewById(R.id.layout1);
+
+        tvKelas.setText(NamaRoom);
 
         Kirim.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,10 +138,12 @@ public class Room extends AppCompatActivity {
 
     public void addMessageBox(String message, int type) {
         TextView textView = new TextView(Room.this);
-        textView.setPadding(50,50,50,25);
+        textView.setPadding(15,15,15,15);
+        textView.setTextSize(20);
         textView.setText(message);
 
-        LinearLayout.LayoutParams lp2 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT );
+        LinearLayout.LayoutParams lp2 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        lp2.setMargins(0,5,0,5);
         lp2.weight = 1.0f;
 
         if (type == 1) {

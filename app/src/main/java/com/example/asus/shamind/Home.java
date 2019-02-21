@@ -55,7 +55,6 @@ public class Home extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        BtnRoom = (Button) findViewById(R.id.Btn_Room);
         mListViewNamaRoom = (ListView) findViewById(R.id.listViewNamaRoom);
 
         mAuth = FirebaseAuth.getInstance();
@@ -99,13 +98,6 @@ public class Home extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        BtnRoom.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent mIntent = new Intent(Home.this, Room.class);
-                startActivity(mIntent);
-            }
-        });
 
 
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -215,8 +207,10 @@ public class Home extends AppCompatActivity
         mListViewNamaRoom.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String roomId = IdRoom.get(position);
+                String namaRoom = NamaRoom.get(position);
                 Intent mIntent = new Intent(Home.this,Room.class);
                 mIntent.putExtra("ID",roomId);
+                mIntent.putExtra("ROOM",namaRoom);
                 startActivity(mIntent);
             }
         });

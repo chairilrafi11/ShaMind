@@ -124,6 +124,10 @@ public class Buat_Room extends AppCompatActivity {
                 myRef.child(IdRoom).child("politik").setValue(Politik);
                 myRef.child(IdRoom).child("gayahidup").setValue(GayaHidup);
                 myRef.child(IdRoom).child("chat").setValue("!@!-!@!"+userID+","+Username+",Welcome to "+NamaRoom);
+                Intent mIntent = new Intent(Buat_Room.this,Room.class);
+                mIntent.putExtra("ID",IdRoom);
+                mIntent.putExtra("ROOM",NamaRoom);
+                startActivity(mIntent);
             }
         });
 
